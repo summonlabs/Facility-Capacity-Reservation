@@ -1,0 +1,26 @@
+@PACKAGE_INIT@
+
+# Facility Capacity Reservation - DCCP Tranche 2 (Facility Capacity and Placement).
+#
+# Exported target:
+#   dccp::facility_capacity_reservation        C++20 library
+#
+# Example:
+#   find_package(facility_capacity_reservation 1.0 REQUIRED)
+#   target_link_libraries(app PRIVATE dccp::facility_capacity_reservation)
+
+include(CMakeFindDependencyMacro)
+
+include("${CMAKE_CURRENT_LIST_DIR}/facility_capacity_reservationTargets.cmake")
+
+set(FACILITY_CAPACITY_RESERVATION_LIBRARIES dccp::facility_capacity_reservation)
+set(FACILITY_CAPACITY_RESERVATION_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_INCLUDEDIR@")
+
+if(NOT TARGET dccp::facility_capacity_reservation)
+  set(facility_capacity_reservation_FOUND FALSE)
+  set(facility_capacity_reservation_NOT_FOUND_MESSAGE
+      "the facility_capacity_reservation export set did not provide dccp::facility_capacity_reservation")
+  return()
+endif()
+
+check_required_components(facility_capacity_reservation)

@@ -1,0 +1,33 @@
+Facility Capacity Reservation
+Copyright 2026 Summon Software Labs.
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Facility Capacity Reservation is part of Data Center Control Plane (DCCP),
+Tranche 2: Facility Capacity and Placement. It is repository 15 of the canonical
+72-runtime DCCP and owns facility-capacity commitments across space, rack, power,
+cooling and explicit facility services: reservation identity and generations,
+typed multi-resource claims, exact source-generation preconditions, headroom
+accounting, validity intervals, lifecycle, amendment lineage, idempotent retry,
+durable crash-safe publication and reconciliation against newly consumed capacity
+snapshots.
+
+Facility Capacity Reservation sits above Accelerated Systems Infrastructure (ASI)
+and Distributed Fabric Infrastructure (DFI). It does not own accelerator
+execution, memory, serving or scheduling (ASI), network topology, paths,
+transport or bandwidth (DFI), the derivation of facility capacity (Facility
+Capacity and the source capacity runtimes), placement selection (Facility
+Placement Planner), or rack, asset, power and cooling actuation (Rack Registry,
+Asset Registry, Power Control, Cooling Control).
+
+Third-party notices
+------------------
+
+This product includes no third-party source code and links no third-party
+libraries. It is implemented against the C++20 standard library and the
+operating-system interfaces it needs for durable atomic file replacement and
+advisory inter-process file locking.
+
+The canonical serialization format, the integrity digest (SHA-256, FIPS 180-4)
+and every identity, generation, epoch and attempt type are implemented in this
+repository.
