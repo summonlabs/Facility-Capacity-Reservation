@@ -80,9 +80,6 @@ fix the cause rather than suppressing the warning.
   documents, imported capacity snapshots and CLI arguments are untrusted input.
   Malformed, truncated, oversized, reordered, duplicated and corrupted inputs
   must be rejected with a stable error code.
-* **Tests must terminate on their own.** A test that hangs is a defect to
-  diagnose and repair, not to work around. Do not add job timeouts, watchdog
-  success logic or forced termination to make a test look green.
 * **Atomicity is not negotiable.** A multi-resource commitment is applied in
   full or not at all, and never becomes visible before it is durable.
 * **Authority is explicit.** Every mutation that depends on current state must
