@@ -1,7 +1,6 @@
 # Facility Capacity Reservation
 
-Facility Capacity Reservation is repository 15 of the canonical 72-runtime Data
-Center Control Plane (DCCP), in Tranche 2: Facility Capacity and Placement. It is
+Facility Capacity Reservation is
 the authority that turns physical facility limits into explicit capacity
 commitments: it decides whether a facility-capacity commitment can be made
 against an exact capacity generation, which resources it binds and for how long,
@@ -663,7 +662,7 @@ above.
 
 * `README.md` — this file: boundary, model, proofs, limitations.
 * `docs/FORMAT.md` — the canonical capacity-snapshot and state-document formats.
-* `NOTICE` — the DCCP position of this repository and its third-party position.
+* `NOTICE` — third-party licensing position.
 * `CONTRIBUTING.md` — licensing of contributions, build and quality expectations.
 * `include/dccp/facility_capacity_reservation/*.hpp` — the public contract, in
   comments attached to the declarations they govern.
